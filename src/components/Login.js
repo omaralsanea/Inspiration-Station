@@ -1,40 +1,32 @@
 import React from 'react';
-import axios from 'axios';
-
+import { loginUser } from '../lib/api';
 import { useNavigate } from 'react-router-dom';
 
-const loginRequirements = {
-  email: '',
-  password: '',
-};
-
 function Login() {
-  const Navigate = useNavigate();
-  const [newLoginAttempt, setNewLoginAttempt] =
-    React.useState(loginRequirements);
+  const navigate = useNavigate();
 
-  function handleChange(e) {
-    setNewLoginAttempt({ ...newLoginAttempt, [e.target.name]: e.target.value });
+  const [user, setUser] = React.useState({
+    email: '',
+    password: '',
+  });
+
+  function handleChange(event) {
+    setUser({ ...user, [event.target.name]: event.target.value });
   }
 
-  function userLogin(e) {
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
 
-    const theLoginAttempt = {
-      email: newLoginAttempt.email,
-      password: newLoginAttempt.password,
-    };
-
-    axios
-      .post('https://ga-cheesebored.herokuapp.com/login', theLoginAttempt)
-      .then((data) => {
-        console.log(data);
+    const getData = async () => {
+      try {
+        const { data } = await loginUser(user);
         localStorage.setItem('accessToken', data.token);
-        Navigate('/');
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+        navigate('/');
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    getData();
   }
 
   return (
@@ -43,7 +35,7 @@ function Login() {
         <div className="columns">
           <form
             className="box column is-half is-offset-one-quarter"
-            onSubmit={userLogin}
+            onSubmit={handleSubmit}
           >
             <div className="field">
               <label className="label">Email</label>
@@ -53,7 +45,7 @@ function Login() {
                   placeholder="Email"
                   name="email"
                   onChange={handleChange}
-                  value={newLoginAttempt.email}
+                  value={user.email}
                 />
               </div>
             </div>
@@ -66,7 +58,7 @@ function Login() {
                   placeholder="Password"
                   name="password"
                   onChange={handleChange}
-                  value={newLoginAttempt.password}
+                  value={user.password}
                 />
               </div>
             </div>

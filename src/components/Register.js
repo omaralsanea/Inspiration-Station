@@ -1,60 +1,42 @@
 import React from 'react';
-import axios from 'axios';
+import { registerUser } from '../lib/api';
 import { useNavigate } from 'react-router-dom';
-
-const user = {
-  username: '',
-  email: '',
-  password: '',
-  passwordConfirmation: '',
-};
 
 function Register() {
   const navigate = useNavigate();
-  const [newUserDetails, setNewUserDetails] = React.useState(user);
 
-  function handleChange(e) {
-    setNewUserDetails({ ...newUserDetails, [e.target.name]: e.target.value });
+  const [user, setUser] = React.useState({
+    username: '',
+    email: '',
+    password: '',
+    passwordConfirmation: '',
+  });
+
+  function handleChange(event) {
+    setUser({ ...user, [event.target.name]: event.target.value });
   }
 
-  function registerUser(e) {
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
 
-    if (newUserDetails.password === newUserDetails.passwordConfirmation) {
-      const newUser = {
-        username: newUserDetails.username,
-        email: newUserDetails.email,
-        password: newUserDetails.password,
-        passwordConfirmation: newUserDetails.passwordConfirmation,
-      };
-
-      axios
-        .post('https://ga-cheesebored.herokuapp.com/register', newUser)
-        .then((res) => {
-          console.log(res);
-          console.log(res.data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-      // <Navigate to="/Login" replace={true} />;
-      navigate('/login');
-      // - using this will prevent the link working if something is wrong
-
-      console.log(newUser);
-    } else {
-      console.log('password and password confirmation does not match');
-    }
+    const getData = async () => {
+      try {
+        await registerUser(user);
+        navigate('/login');
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    getData();
   }
 
   return (
     <section className="section">
       <div className="container">
-        {/* form start */}
         <div className="columns">
           <form
             className="column is-half is-offset-one-quarter box"
-            onSubmit={registerUser}
+            onSubmit={handleSubmit}
           >
             <div className="field">
               <label className="label">Username</label>
@@ -64,7 +46,7 @@ function Register() {
                   placeholder="Username"
                   name="username"
                   onChange={handleChange}
-                  value={newUserDetails.username}
+                  value={user.username}
                 />
               </div>
             </div>
@@ -76,7 +58,7 @@ function Register() {
                   placeholder="Email"
                   name="email"
                   onChange={handleChange}
-                  value={newUserDetails.email}
+                  value={user.email}
                 />
               </div>
             </div>
@@ -89,7 +71,7 @@ function Register() {
                   placeholder="Password"
                   name="password"
                   onChange={handleChange}
-                  value={newUserDetails.password}
+                  value={user.password}
                 />
               </div>
             </div>
@@ -102,7 +84,7 @@ function Register() {
                   placeholder="Password Confirmation"
                   name="passwordConfirmation"
                   onChange={handleChange}
-                  value={newUserDetails.passwordConfirmation}
+                  value={user.passwordConfirmation}
                 />
               </div>
             </div>
@@ -117,5 +99,4 @@ function Register() {
     </section>
   );
 }
-
 export default Register;
