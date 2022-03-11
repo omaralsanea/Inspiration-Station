@@ -1,42 +1,59 @@
 import React from 'react';
-import { registerUser } from '../lib/api';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+
+const user = {
+  username: '',
+  email: '',
+  password: '',
+  passwordConfirmation: '',
+};
 
 function Register() {
   const navigate = useNavigate();
+  const [newUserDetails, setNewUserDetails] = React.useState(user);
 
-  const [user, setUser] = React.useState({
-    username: '',
-    email: '',
-    password: '',
-    passwordConfirmation: '',
-  });
-
-  function handleChange(event) {
-    setUser({ ...user, [event.target.name]: event.target.value });
+  function handleChange(e) {
+    setNewUserDetails({ ...newUserDetails, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function registerUser(e) {
+    e.preventDefault();
 
-    const getData = async () => {
-      try {
-        await registerUser(user);
-        navigate('/login');
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    getData();
+    if (newUserDetails.password === newUserDetails.passwordConfirmation) {
+      const newUser = {
+        username: newUserDetails.username,
+        email: newUserDetails.email,
+        password: newUserDetails.password,
+        passwordConfirmation: newUserDetails.passwordConfirmation,
+      };
+
+      axios
+        .post('https://api.api-ninjas.com/v1/quotes?category=', newUser)
+        .then((res) => {
+          console.log(res);
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+
+      navigate('/login');
+
+      console.log(newUser);
+    } else {
+      console.log('password and password confirmation does not match');
+    }
   }
 
   return (
     <section className="section">
       <div className="container">
+        {/* form start */}
         <div className="columns">
           <form
             className="column is-half is-offset-one-quarter box"
-            onSubmit={handleSubmit}
+            onSubmit={registerUser}
           >
             <div className="field">
               <label className="label">Username</label>
@@ -46,7 +63,7 @@ function Register() {
                   placeholder="Username"
                   name="username"
                   onChange={handleChange}
-                  value={user.username}
+                  value={newUserDetails.username}
                 />
               </div>
             </div>
@@ -58,7 +75,7 @@ function Register() {
                   placeholder="Email"
                   name="email"
                   onChange={handleChange}
-                  value={user.email}
+                  value={newUserDetails.email}
                 />
               </div>
             </div>
@@ -71,7 +88,7 @@ function Register() {
                   placeholder="Password"
                   name="password"
                   onChange={handleChange}
-                  value={user.password}
+                  value={newUserDetails.password}
                 />
               </div>
             </div>
@@ -84,12 +101,12 @@ function Register() {
                   placeholder="Password Confirmation"
                   name="passwordConfirmation"
                   onChange={handleChange}
-                  value={user.passwordConfirmation}
+                  value={newUserDetails.passwordConfirmation}
                 />
               </div>
             </div>
             <div className="field">
-              <button type="submit" className="button is-fullwidth is-warning">
+              <button type="submit" className="button is-fullwidth is-dark">
                 Register Me!
               </button>
             </div>
@@ -99,4 +116,5 @@ function Register() {
     </section>
   );
 }
+
 export default Register;

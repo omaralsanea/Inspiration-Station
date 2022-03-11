@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <header>
       <nav className="navbar is-dark">
-        <div className="container">
+        <div className="navBarContainer">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item">
               Home

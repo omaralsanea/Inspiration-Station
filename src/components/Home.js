@@ -6,8 +6,10 @@ const Home = () => {
     <>
       <section className="hero is-fullheight-with-navbar is-success">
         <div className="hero-body">
-          <div className="container">
+          <div className="inspirationContainer">
             <p className="title has-text-centered">
+              <h1>InspirationStation</h1>
+              <br />
               Welcome to the beginning of the rest of your life...
               <br />
               <br />
@@ -15,16 +17,16 @@ const Home = () => {
             </p>
           </div>
         </div>
-      </section>
-      <section className="hero is-success">
-        <div className="hero-body">
-          <div className="container">
-            <span>
-              <Link to="/quotes">Quotes</Link>
-            </span>
-            <span>
-              <Link to="/hobbies">Hobbies</Link>
-            </span>
+        <div className="parentContainer">
+          <div className="quoteButtonContainer">
+            <Link to="/quotes" className="button is-dark is-large ">
+              Quotes
+            </Link>
+          </div>
+          <div className="hobbyButtonContainer">
+            <Link to="/hobbies" className="button is-dark is-large">
+              Hobbies
+            </Link>
           </div>
         </div>
       </section>

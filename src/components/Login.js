@@ -1,32 +1,40 @@
 import React from 'react';
-import { loginUser } from '../lib/api';
+import axios from 'axios';
+
 import { useNavigate } from 'react-router-dom';
 
+const loginRequirements = {
+  email: '',
+  password: '',
+};
+
 function Login() {
-  const navigate = useNavigate();
+  const Navigate = useNavigate();
+  const [newLoginAttempt, setNewLoginAttempt] =
+    React.useState(loginRequirements);
 
-  const [user, setUser] = React.useState({
-    email: '',
-    password: '',
-  });
-
-  function handleChange(event) {
-    setUser({ ...user, [event.target.name]: event.target.value });
+  function handleChange(e) {
+    setNewLoginAttempt({ ...newLoginAttempt, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function userLogin(e) {
+    e.preventDefault();
 
-    const getData = async () => {
-      try {
-        const { data } = await loginUser(user);
-        localStorage.setItem('accessToken', data.token);
-        navigate('/');
-      } catch (err) {
-        console.error(err);
-      }
+    const theLoginAttempt = {
+      email: newLoginAttempt.email,
+      password: newLoginAttempt.password,
     };
-    getData();
+
+    axios
+      .post('https://api.api-ninjas.com/v1/quotes?category=', theLoginAttempt)
+      .then((data) => {
+        console.log(data);
+        localStorage.setItem('accessToken', data.token);
+        Navigate('/');
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   return (
@@ -35,7 +43,7 @@ function Login() {
         <div className="columns">
           <form
             className="box column is-half is-offset-one-quarter"
-            onSubmit={handleSubmit}
+            onSubmit={userLogin}
           >
             <div className="field">
               <label className="label">Email</label>
@@ -45,7 +53,7 @@ function Login() {
                   placeholder="Email"
                   name="email"
                   onChange={handleChange}
-                  value={user.email}
+                  value={newLoginAttempt.email}
                 />
               </div>
             </div>
@@ -58,12 +66,12 @@ function Login() {
                   placeholder="Password"
                   name="password"
                   onChange={handleChange}
-                  value={user.password}
+                  value={newLoginAttempt.password}
                 />
               </div>
             </div>
             <div className="field">
-              <button type="submit" className="button is-fullwidth is-warning">
+              <button type="submit" className="button is-fullwidth is-dark">
                 Log Me In!
               </button>
             </div>

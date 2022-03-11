@@ -1,7 +1,90 @@
 @import '~bulma/bulma.sass';
 
-// .container {
+// .buttonsContainer {
 //   display: flex;
 //   flex-direction: row;
-//   justify-content: space-between;
+// justify-content: space-between;
 // }
+
+// .buttonsContainer {
+//   display: flex;
+//   justify-content: space-between;
+//   margin-left: 100px;
+//   margin-right: 100px;
+//   margin-bottom: 50px;
+//   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+//   // border: 5px solid black;
+// }
+
+.buttonsContainer {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: black;
+}
+
+.quoteButtonContainer {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  // padding-left: 130px;
+  color: black;
+}
+.hobbyButtonContainer {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: black;
+  // padding-left: 930px;
+  padding-bottom: 50px;
+  margin-left: 100px;
+}
+
+.hobbiesContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 400px;
+  background-color: aquamarine;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  padding-left: 300px;
+  padding-top: 250px;
+  padding-right: 400px;
+}
+
+.quotesContainer {
+  // display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 400px;
+  background-color: lightcoral;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  padding-left: 250px;
+  padding-top: 200px;
+  padding-right: 400px;
+}
+
+.title {
+  font-size: 70px;
+  font-style: italic;
+  font-weight: 200;
+}
+
+.hobbiesSection {
+  background-color: aqua;
+}
+
+.parentContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 200px;
+}
+
+.buttons {
+  padding-left: 150px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.columns {
+  padding-bottom: 70px;
+}
+
+.button {
+  padding: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

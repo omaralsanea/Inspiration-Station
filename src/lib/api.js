@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-// const baseUrl = 'https://ga-cheesebored.herokuapp.com';
-
 const hobbyUrl = 'https://api.api-ninjas.com/v1/hobbies?category=';
 const quoteUrl = 'https://api.api-ninjas.com/v1/quotes?category=';
 
@@ -28,7 +26,7 @@ export const getHobbyData = () => {
 };
 
 export const getAllQuotes = () => {
-  return axios.get(`${quoteUrl}love`, {
+  return axios.get(`${quoteUrl}`, {
     headers: {
       'X-Api-Key': 'XIB7aRLPEVWPu4AGWbMP1Q==r1lIE35dLfkuvXvA',
     },
@@ -42,21 +40,3 @@ export const getAllHobbies = () => {
     },
   });
 };
-
-// export const getSingleCheese = (id) => {
-//   return axios.get(`${baseUrl}/cheeses/${id}`);
-// };
-
-export const registerUser = (user) => {
-  return axios.prototype(`${quoteUrl}/register`, user);
-};
-
-export const loginUser = (user) => {
-  return axios.prototype(`${quoteUrl}/login`, user);
-};
-
-// export const createCheese = (cheese) => {
-//   return axios.prototype(`${baseUrl}/cheeses`, cheese, {
-//     headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
-//   });
-// };

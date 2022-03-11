@@ -1,5 +1,4 @@
 import React from 'react';
-// import CheeseCard from './CheeseCard';
 
 import { getAllQuotes } from '../lib/api';
 
@@ -19,11 +18,31 @@ const QuotesIndex = () => {
     getData();
   }, []);
 
+  function refreshPage() {
+    window.location.reload();
+  }
+
   return (
-    <section className="section">
-      <div className="container">
+    <section className="quotesSection">
+      <div className="quotesContainer is-half">
         <div className="columns is-multiline">
-          {quotes ? <p>{quotes[0].quote}</p> : <p>Loading....</p>}
+          {quotes ? (
+            <p>
+              Quote: "{quotes[0].quote}" <br />
+              Author: {quotes[0].author} <br />
+              Category: {quotes[0].category}
+            </p>
+          ) : (
+            <p>Loading....</p>
+          )}
+        </div>
+        <div className="button">
+          <button
+            className="button is-white is-medium is-size-6 is-fullwidth"
+            onClick={refreshPage}
+          >
+            Click here for a new QUOTE 💬 !
+          </button>
         </div>
       </div>
     </section>
