@@ -5,21 +5,25 @@
 //   flex-direction: row;
 // justify-content: space-between;
 // }
-
-// .buttonsContainer {
-//   display: flex;
-//   justify-content: space-between;
-//   margin-left: 100px;
-//   margin-right: 100px;
-//   margin-bottom: 50px;
-//   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-//   // border: 5px solid black;
-// }
+.hero {
+  background-color: aqua;
+}
 
 .buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 50px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: black;
+
+  // border: 5px solid black;
 }
+
+// .buttonsContainer {
+//   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+//   color: black;
+// }
 
 .quoteButtonContainer {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

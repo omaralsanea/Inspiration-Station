@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <>
-      <section className="hero is-fullheight-with-navbar is-success">
+      <section className="hero is-fullheight-with-navbar">
         <div className="hero-body">
           <div className="inspirationContainer">
             <p className="title has-text-centered">
@@ -17,7 +17,22 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="parentContainer">
+
+        <div className="buttonsContainer is-align-content-center">
+          <Link to="/quotes" className="button is-dark is-large">
+            Quotes
+          </Link>
+          <Link to="/hobbies" className="button is-dark is-large">
+            Hobbies
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Home;
+/* <div className="parentContainer">
           <div className="quoteButtonContainer">
             <Link to="/quotes" className="button is-dark is-large ">
               Quotes
@@ -29,9 +44,6 @@ const Home = () => {
             </Link>
           </div>
         </div>
-      </section>
-    </>
-  );
-};
+      </section> */
 
-export default Home;
+// export default Home;
