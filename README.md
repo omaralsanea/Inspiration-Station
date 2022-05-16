@@ -60,8 +60,8 @@ After settling on the two external APIs to use we then created wireframes.
 # Wireframes
 ***
 
-> <img width="468" alt="image" src="https://user-images.githubusercontent.com/99892502/168511042-a7061f05-be4d-4e6b-904d-c0ce41fd23d1.png">
-> <img width="468" alt="image" src="https://user-images.githubusercontent.com/99892502/168511055-e3d94173-b719-4b45-9417-11e07ccefb29.png">
+> <img width="668" alt="image" src="https://user-images.githubusercontent.com/99892502/168511042-a7061f05-be4d-4e6b-904d-c0ce41fd23d1.png">
+> <img width="668" alt="image" src="https://user-images.githubusercontent.com/99892502/168511055-e3d94173-b719-4b45-9417-11e07ccefb29.png">
 
 
 > As can be seen from the wireframes we were originally planning on having more user interaction with the page - with a registered and logged in user able to submit their favourite quotes or hobbies if they didn’t seem to be present on the site.   
