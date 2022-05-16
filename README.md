@@ -19,12 +19,12 @@ Built using 2 external APIs this web-app offers the user thousands of quotes to 
 
 > ### Random Quote & Random Hobby pages:
 
-<img width="450" alt="Screenshot 2022-05-16 at 20 26 52" src="https://user-images.githubusercontent.com/98101603/168678878-34ffc4b6-f194-4347-ae26-dc5db30355ef.png">
-<img width="450" alt="Screenshot 2022-05-16 at 20 15 55" src="https://user-images.githubusercontent.com/98101603/168678891-3f41b49b-c743-46f4-9d9a-782b732ffd7f.png">
+<img width="650" alt="Screenshot 2022-05-16 at 20 26 52" src="https://user-images.githubusercontent.com/98101603/168678878-34ffc4b6-f194-4347-ae26-dc5db30355ef.png">
+<img width="650" alt="Screenshot 2022-05-16 at 20 15 55" src="https://user-images.githubusercontent.com/98101603/168678891-3f41b49b-c743-46f4-9d9a-782b732ffd7f.png">
 
 > ### Random Hobby Wikipedia page for more detail:
 
-<img width="1440" alt="Screenshot 2022-05-16 at 20 16 14" src="https://user-images.githubusercontent.com/98101603/168679106-59030575-0da2-4621-bb2f-16436d08ef4a.png">
+<img width="650" alt="Screenshot 2022-05-16 at 20 16 14" src="https://user-images.githubusercontent.com/98101603/168679106-59030575-0da2-4621-bb2f-16436d08ef4a.png">
 
 
 ## Deployment
