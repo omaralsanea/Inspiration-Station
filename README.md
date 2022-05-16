@@ -114,13 +114,12 @@ Lastly, we included the reload function so that if the user didn’t like that p
 # Future Improvements/Features
 ***
 
-Some additional features I would like to add to improve the app and create a more in-depth user experience:
+Additional features that would improve the app:
 
--	Login functionality/CORS error resolution
--	Functionality for the user to add their own quotes or hobbies
--	Responsive design to allow users to play in mobile/tablet mode
--	A more unique approach to the styling of all pages
--	For the Random Hobbies page to pull from all 6 various categories within the API
+-	Login functionality/CORS error resolution.
+-	Functionality for the user to add their own quotes or hobbies.
+-	Responsive design to allow users to explore in mobile/tablet mode.
+-	For the Random Hobbies page to pull from all 6 various categories within the API.
 
 
 
