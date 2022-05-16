@@ -10,7 +10,7 @@ Feeling uninspired lately? Need a new Hobby? Inspiration Station has you covered
 > ### Register & Login pages:
 > <img width="450" alt="image" src="https://user-images.githubusercontent.com/99892502/168510433-20576cd7-e981-4cf9-a65f-574957f52949.png">     <img width="450" alt="image" src="https://user-images.githubusercontent.com/99892502/168510438-1577da77-3d39-447e-bedc-4008bc411c4a.png">
 
-> ### Random Quotes & Random Hobby pages:
+> ### Random Quote & Random Hobby pages:
 > <img width="450" alt="image" src="https://user-images.githubusercontent.com/99892502/168510468-e9905346-a9f2-4a50-9596-ac9fcd04ef48.png"> <img width="450" alt="image" src="https://user-images.githubusercontent.com/99892502/168510501-9733af10-d761-4fa5-b2b8-59e58f7cada3.png">
 
 > ### Random Hobby Wikipedia page for more detail:
