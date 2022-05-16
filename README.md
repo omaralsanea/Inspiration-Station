@@ -28,7 +28,7 @@ To build a React application that consumes a public API in 48 hours.
 ## Technologies Used:
 -	Front End: React
     - SPA Routing and Components
-    - Packages: Axios for API handling, UUID4 for unique IDs
+    - Packages: Axios for API handling, React Router (react-router-dom)
 -	Styling: Bulma
 -	Version Control: Git
 -	Deployment: Netlify
