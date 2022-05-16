@@ -53,9 +53,3 @@ const HobbiesIndex = () => {
 };
 
 export default HobbiesIndex;
-
-//  <Link
-//    to={{
-//      pathname: `/${hobbies.link}`
-//    }}
-//  />;

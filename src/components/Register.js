@@ -49,7 +49,6 @@ function Register() {
   return (
     <section className="section">
       <div className="container">
-        {/* form start */}
         <div className="columns">
           <form
             className="column is-half is-offset-one-quarter box"

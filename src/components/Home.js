@@ -32,18 +32,3 @@ const Home = () => {
 };
 
 export default Home;
-/* <div className="parentContainer">
-          <div className="quoteButtonContainer">
-            <Link to="/quotes" className="button is-dark is-large ">
-              Quotes
-            </Link>
-          </div>
-          <div className="hobbyButtonContainer">
-            <Link to="/hobbies" className="button is-dark is-large">
-              Hobbies
-            </Link>
-          </div>
-        </div>
-      </section> */
-
-// export default Home;
