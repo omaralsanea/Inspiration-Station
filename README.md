@@ -75,7 +75,7 @@ We created routh paths in the App.js file to each of the areas of the web app:
 
 <img width="360" alt="Screenshot 2022-05-16 at 18 18 17" src="https://user-images.githubusercontent.com/98101603/168680564-66eccc03-bfd7-4bbd-bd89-2ad371ffe4d9.png">
 
-Within both the hobbies component and the quotes component we made use of async await functions, State and useEffects. Prior to starting the project we had a very rudimentary understanding of State but over the course of this project it became clearer to us both the necessity and the power of it. 
+Within both the hobbies component and the quotes component, we made use of async await functions, State and useEffects. Prior to starting the project, we had a very rudimentary understanding of State but over the course of this project it became clearer to us both the necessity and the power of it. 
 Below shows all three of these particular examples of code: 
 
 <img width="319" alt="Screenshot 2022-05-16 at 18 47 08" src="https://user-images.githubusercontent.com/98101603/168680635-319d3e79-e42f-46c9-9b73-8294b1af82bb.png">
