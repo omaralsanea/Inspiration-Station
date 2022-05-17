@@ -15,7 +15,7 @@ Built using 2 external APIs this web-app offers the user thousands of quotes to 
 > <img width="750" alt="image" src="https://user-images.githubusercontent.com/99892502/168510370-c060497f-f4a0-471d-b293-cb740da11451.png"> 
 
 ### Register & Login pages:
-> <img width="750" alt="image" src="https://user-images.githubusercontent.com/99892502/168510433-20576cd7-e981-4cf9-a65f-574957f52949.png">     <img width="450" alt="image" src="https://user-images.githubusercontent.com/99892502/168510438-1577da77-3d39-447e-bedc-4008bc411c4a.png">
+> <img width="750" alt="image" src="https://user-images.githubusercontent.com/99892502/168510433-20576cd7-e981-4cf9-a65f-574957f52949.png">     <img width="750" alt="image" src="https://user-images.githubusercontent.com/99892502/168510438-1577da77-3d39-447e-bedc-4008bc411c4a.png">
 
 ### Random Quote & Random Hobby pages:
 
