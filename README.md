@@ -7,7 +7,7 @@ Built using 2 external APIs this web-app offers the user thousands of quotes to 
 
 - Project Name: Inspiration Station
 - Timeframe: Two Days
-- Pair Coded Project - Omar Al-Sanea and Dani Gordon
+- Pair Coded Project - Omar Al-Sanea and (Dani Gordon) (https://github.com/Dani-Gordon)
 
 
 ## Site Overview:
